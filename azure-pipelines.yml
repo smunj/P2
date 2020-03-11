@@ -3,7 +3,7 @@ resources:
   repositories:
     - repository: MyRepo
       type: github
-      endpoint: github_2
+      endpoint: github_1
       name: anukritigupta1234/helloworld
       
 
