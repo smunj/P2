@@ -4,7 +4,7 @@ resources:
     - repository: MyRepo
       type: github
       endpoint: github_1
-      name: anukritigupta1234/helloworld
+      name: anukritigupta1234/P2
       
 
 trigger: none
