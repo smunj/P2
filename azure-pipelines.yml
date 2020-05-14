@@ -11,29 +11,29 @@ trigger: none
 
 pool: default
 
-# steps:
-# - script: echo Hello, world!
-#   displayName: 'Run a one-line script'
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 
-stages:
-  - stage:
-    jobs:
-      - job: J4
-        pool:
-         name: Default
-        steps:
-          - task: PublishBuildArtifacts@1
-            inputs:
-              PathtoPublish: 'artifact3'
-              ArtifactName: 'A3_Project2'
-              publishLocation: 'Container'
-          - task: PowerShell@2
-            inputs:
-             targetType: 'inline'
-             script: |
-              Write-Host "##vso[build.addbuildtag]trigger tag" 
-              Write-Host "##vso[build.addbuildtag]trigger tag2"
-              Write-Host "##vso[build.addbuildtag]trigger tag3"
-              Write-Host "##vso[build.addbuildtag]trigger tag4"
+# stages:
+#   - stage:
+#     jobs:
+#       - job: J4
+#         pool:
+#          name: Default
+#         steps:
+#           - task: PublishBuildArtifacts@1
+#             inputs:
+#               PathtoPublish: 'artifact3'
+#               ArtifactName: 'A3_Project2'
+#               publishLocation: 'Container'
+#           - task: PowerShell@2
+#             inputs:
+#              targetType: 'inline'
+#              script: |
+#               Write-Host "##vso[build.addbuildtag]trigger tag" 
+#               Write-Host "##vso[build.addbuildtag]trigger tag2"
+#               Write-Host "##vso[build.addbuildtag]trigger tag3"
+#               Write-Host "##vso[build.addbuildtag]trigger tag4"
 
 
